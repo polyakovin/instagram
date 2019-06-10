@@ -1,26 +1,27 @@
 import React from 'react';
+import {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Preview from './Preview.js';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() { 
+    let arr = [1,2,3,4,5,6];
+    return (
+      <div className="App">
+        <h1>Instagram created by Andrei Remizov</h1>
+        <header className="App-header">
+        {
+          arr.map(item=><Preview />)
+        }
+        </header>
+        <button>
+          Загрузить еще
+        </button>
+      </div>
+    );
+  }
 }
 
 export default App;
+
