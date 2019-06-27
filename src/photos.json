@@ -1,0 +1,23 @@
+[
+  {
+    "name": "name1",
+    "url":"https://vokrug.tv/pic/person/1/9/4/8/1948bdc27265d19af825628eb1eeece4.jpeg",
+    "describtion": "Описание к фото",
+    "likesAmount": 0,
+    "isLiked": false
+  },
+   {
+    "name": "name2",
+    "url":"https://vokrug.tv/pic/person/1/9/4/8/1948bdc27265d19af825628eb1eeece4.jpeg",
+    "describtion": "Описание к фото",
+    "likesAmount": 2,
+    "isLiked": false
+  },
+   {
+    "name": "name3",
+    "url":"https://vokrug.tv/pic/person/1/9/4/8/1948bdc27265d19af825628eb1eeece4.jpeg",
+    "describtion": "Описание к фото",
+    "likesAmount": 4,
+    "isLiked": false
+  }
+]

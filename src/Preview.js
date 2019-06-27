@@ -1,28 +1,27 @@
 import React , {Component} from 'react';
-import Name from './Name.js';
 import Like from './Like.js';
 import Time from './Time.js';
 
 import { Link } from "react-router-dom";
+import {withRouter} from "react-router-dom";
 
 
 class Preview extends Component {
-  liked(){
-    console.log("1");
-  }
-  render(){
 
+  render(){
+    const {url, name, description:descr , likesAmount} = this.props.photo;
   return (
     <div className="preview">
-      <Link to="/preview"><Name /></Link>
-      <img src="https://vokrug.tv/pic/person/1/9/4/8/1948bdc27265d19af825628eb1eeece4.jpeg" alt="foto" />
+      <Link to={"/photo/"+ this.props.photo.name}><h2>{name}</h2></Link> 
+      <img src={url} alt="foto" />
       <div>
-	      <Like onClick={()=>{this.liked()}} />
+	      <Like likesAmount={likesAmount} addLike={this.props.addLike} />
 	      <Time />
       </div>
+      <p>{descr}</p>
     </div>
    );  
   }
 }
 
-export default Preview;
+export default withRouter(Preview);
