@@ -9,7 +9,6 @@ class  LikeComponent extends Component {
 	  return (
 	    <div className="like">
 	      <button onClick={this.props.addLike}></button>
-	      <button onClick={this.props.increment}></button>
 	      <span>{this.props.likesAmount}</span>
 	    </div>
 	  );

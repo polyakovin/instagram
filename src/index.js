@@ -3,13 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import photos from './photos.json';
 
 import {BrowserRouter} from "react-router-dom";
 
 import {createStore,applyMiddleware, combineReducers} from 'redux';
 import {Provider} from 'react-redux';
 
-import counter from './reducers'
+import counter from './reducers';
+import photosReducer from './reducers/photos';
 
 const initialState = localStorage['redux-store']
     ? JSON.parse(localStorage['redux-store'])
@@ -17,6 +19,7 @@ const initialState = localStorage['redux-store']
   counter: {
     value: 0,  
   },
+  photos
 };
 const logger = store => next => action => {
   let result;
@@ -37,9 +40,11 @@ const storeFactory = (initialState = {}) => {
   return applyMiddleware
     (logger, saver) // middlewares
     (createStore)
-    (combineReducers({ counter }), initialState);
+    (combineReducers({ counter, photosReducer }), initialState);
 };
 const store = storeFactory(initialState);
+
+
 
 
 ReactDOM.render(( 

@@ -11,3 +11,8 @@ export  const zero = () => ({
 export  const decrement = () => ({
   type: actionNames.DECREMENT,
 });
+
+export  const addLike = (index) => ({
+  type: actionNames.ADD_LIKE,
+  index
+});
