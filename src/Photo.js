@@ -16,23 +16,22 @@ class Photo extends Component {
       {
         id: new Date()+Math.random(),
         date: new Date(),
-        author: 'name',
+        author: 'name 1',
         text : 'text',
       },
        {
         id: new Date()+Math.random(),
         date: new Date(),
-        author: 'name',
+        author: 'name 2',
         text : 'text',
       },
        {
         id: new Date()+Math.random(),
         date: new Date(),
-        author: 'name',
+        author: 'name 3',
         text : 'text',
       },
     ]
-    // photo:null
   };
   
   addComment(text){
@@ -68,21 +67,23 @@ class Photo extends Component {
     const photo = photos.find((photo)=>photo.name===id);
     const {name,url,describtion,likesAmount,isLiked} = photo;
 
-   const comments = this.state.comments.map(function(item , i){
-    return <Comment key= {Date.now()+'_'+i} comment = {item} />
+   const comments = this.state.comments.map((item , i)=>{
+    return <Comment key= {Date.now()+'_'+i} comment = {item} removeComment={this.removeComment.bind(this, item.id)} />
    });
    
   return (
     <div className="photo" >
-      {name}
+      <h2 className="photoName">{name}</h2>
       <Link to="/"><Back /></Link>
-      <img src={url} alt={describtion} />
-      <p>
-        {describtion}
-      </p>
-      <div>
-	      <Like isLiked={isLiked} addLike={()=>{this.addLike.bind(this)}} likesAmount={likesAmount} />
-	      <Time />
+      <div className="photoPhoto">
+        <img src={url} alt={describtion} />
+        <Like isLiked={isLiked} addLike={()=>{this.addLike.bind(this)}} likesAmount={likesAmount} />
+        <Time />
+      </div>
+      <div className="photoComents"> 
+         <p>
+          {describtion}
+        </p> 
         {
           comments
         }

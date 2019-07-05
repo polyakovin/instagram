@@ -12,7 +12,7 @@ class Preview extends Component {
     const {url, name, description:descr , likesAmount} = this.props.photo;
   return (
     <div className="preview">
-      <Link to={"/photo/"+ this.props.photo.name}><h2>{name}</h2></Link> 
+      <Link to={"/photo/"+ this.props.photo.name}><h2 className="name">{name}</h2></Link> 
       <img src={url} alt="foto" />
       <div>
 	      <Like likesAmount={likesAmount} addLike={this.props.addLike} />

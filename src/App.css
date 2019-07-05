@@ -1,3 +1,12 @@
+*{
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1{
+  color: salmon;
+}
 .App {
   text-align: center;
 }
@@ -34,15 +43,53 @@
 
 
 .preview{
+  height: 400px;
+  width: 400px;
   border: 2px solid black;
   border-radius: 5px;
   margin: 5px
 }
 
+.preview a{
+  text-decoration: none;
+  color: black;
+}
+
+.name{
+  margin: 10px 0 20px ;
+}
+
+.photoName{
+  font-size: 50px;
+  margin:10px 0;
+}
+
+.photoPhoto{
+  float: left;
+  display: inline-block;
+  margin: 50px;
+  width: 300px;
+}
+
+.photoComents{
+  margin-top: 50px;
+}
+
+.like button{
+  height: 40px;
+  width: 40px;
+  background-image: url('https://png.pngtree.com/svg/20170517/a42369b89c.png');
+  background-repeat: no-repeat;
+  background-size: 40px;
+  border: none;
+  background-color: white;
+}
+
 
 img{
-width: 200px;
-height: 200px;
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
 }
 
 .time, .like, h3{
@@ -56,4 +103,29 @@ height: 200px;
  overflow: hidden
   }
 
-  
+.addComment{
+  margin: 10px;
+}
+
+.Comment{
+  padding: 10px ;
+}
+
+.Comment span {
+   padding: 10px ;
+}
+
+.Comment button {
+  background-color: white;
+  border: none;
+  color: tomato;
+}
+
+.back button {
+    width: 200px;
+    height: 30px;
+    border: 5px solid tomato;
+    border-radius: 10px;
+    font-size: 18px;
+    background-color: white;
+}
