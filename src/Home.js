@@ -34,8 +34,7 @@ class HomeComponent extends Component {
     }
   }
 
-  render() { 
-    console.log(this.props);
+  render() {
     return (
       <div className="home">
         <header className="App-header">
